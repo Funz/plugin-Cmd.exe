@@ -1,0 +1,20 @@
+information=Windows batch plugin made by IRSN/Yann Richet\nLesser General Public License
+
+variableStartSymbol=$
+variableLimit=(...)
+formulaStartSymbol=&
+formulaLimit={...}
+
+commentLineChar=REM
+
+roundOff=10
+
+datasetFilter=contains("(.*)","@echo")
+
+outputlist=`grep("(.*)bat","echo(.*)=")>>before("=")>>after("echo")>>trim()`
+
+#output.echo.if=true
+#output.echo.get=filecat("out\.txt") >> split("=") >> get(0) >> trim() >> asNumeric()
+#output.echo.default=1.0
+
+output.???.get=lines("out.txt") >> filter("^???=(.*)") >> after("=")
