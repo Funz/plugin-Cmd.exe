@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Funz/plugin-Cmd.exe.png)](https://travis-ci.org/Funz/plugin-Cmd.exe)
+[![.github/workflows/ant.yml](https://github.com/Funz/plugin-Cmd.exe/actions/workflows/ant.yml/badge.svg)](https://github.com/Funz/plugin-Cmd.exe/actions/workflows/ant.yml)
 
 # Funz plugin: Cmd.exe
 
