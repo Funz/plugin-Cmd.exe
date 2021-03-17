@@ -43,16 +43,16 @@ jobs:
         cd $WD
     - run: |
         ant clean dist
-        cd dist; zip -r ../plugin-MyPlugin.zip *; cd ..
+        cd dist; zip -r ../plugin-Cmd.exe.zip *; cd ..
         ant install
-        zip -r Funz-MyPlugin.zip Funz-MyPlugin
+        zip -r Funz-Cmd.exe.zip Funz-Cmd.exe
     - uses: actions/upload-artifact@v2
       with:
         path: dist
     - uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: ./*-MyPlugin.zip
+        files: ./*-Cmd.exe.zip
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
